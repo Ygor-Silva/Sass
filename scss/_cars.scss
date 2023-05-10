@@ -1,12 +1,26 @@
 .cars {
-    h2 {
-        color: $color-03;
-    }
-    li {
-        color: $color-04;
 
-        a {
-            background-color: $color-default;
+    &__title {
+        color: $color-02;
+    }
+    
+    &__item {
+        @include theme($theme: #ccc, $bg: #fff);
+        color: $color-03;
+        display: flex;
+        float: left;
+        height: max-content;
+        justify-content: center;
+        align-items: baseline;
+        flex-flow: column;
+
+        &--destack {
+            @include theme;
         }
+
+    }
+
+    &__button {
+        background-color: $color-default;
     }
 }
